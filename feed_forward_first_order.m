@@ -1,24 +1,33 @@
 clear all; close all; clc;
 
+% Load in training and testing data
 training_sequence = load('sequence_DIAtemp_train.mat');
 testing_sequence = load('sequence_DIAtemp_test.mat');
 
+
+% Create desired output sequence for neural network from training data
 training_data = zeros(9, length(training_sequence.sequence));
 
 for i = 1:length(training_sequence.sequence)
     training_data(training_sequence.sequence(i), i) = 1; 
 end
 
+% Create input sequence for neural network from training data
 training_sequence.sequence = [1 ; training_sequence.sequence(1:end - 1)];
 
-net = layrecnet(1:2,10,'trainbr');
+% Initialize recurrent neural network of size 10 x 1 with Bayesian Regularization
+net = feedforwardnet(10,'trainbr');
 
+% Train neural network with training data
 net = train(net,training_sequence.sequence.', training_data);
 
+% Test neural network on testing data
 sequenceLength = initializeSymbolMachineF24('sequence_DIAtemp_test.mat',0);
+
 % We can start with a uniform forecast for the first symbol
 probs = [1/9 1/9 1/9 1/9 1/9 1/9 1/9 1/9 1/9];
 [symbol,penalty] = symbolMachineF24(probs);
+
 for ii = 2:sequenceLength
     % Get prediction from neural network
     prediction = net(symbol).';
