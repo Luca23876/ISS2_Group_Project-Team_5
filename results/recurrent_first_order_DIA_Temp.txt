@@ -1,0 +1,15 @@
+
+SYMBOL MACHINE F24 REPORT (EMAIL IN PLAIN TEXT TO PROF WAKIN FOR LEADERBOARD)
+Processed 3287 out of 3287 symbols in data\sequence_DIAtemp_test.mat.
+Total penalty: 5527.608 bits (1.6817 bits per symbol).
+    12375 probabilities forecasted between 0.0000 (Inf bits) and 0.0039 (8 bits); actual occurrence rate 0.0008.
+     2846 probabilities forecasted between 0.0039 (8 bits) and 0.0078 (7 bits); actual occurrence rate 0.0074.
+     1186 probabilities forecasted between 0.0078 (7 bits) and 0.0156 (6 bits); actual occurrence rate 0.0152.
+     1978 probabilities forecasted between 0.0156 (6 bits) and 0.0312 (5 bits); actual occurrence rate 0.0319.
+      868 probabilities forecasted between 0.0312 (5 bits) and 0.0625 (4 bits); actual occurrence rate 0.0588.
+     1639 probabilities forecasted between 0.0625 (4 bits) and 0.1250 (3 bits); actual occurrence rate 0.0769.
+     3488 probabilities forecasted between 0.1250 (3 bits) and 0.2500 (2 bits); actual occurrence rate 0.2079.
+     3834 probabilities forecasted between 0.2500 (2 bits) and 0.5000 (1 bits); actual occurrence rate 0.3641.
+     1369 probabilities forecasted between 0.5000 (1 bits) and 1.0000 (0 bits); actual occurrence rate 0.6406.
+END SYMBOL MACHINE F24 REPORT
+

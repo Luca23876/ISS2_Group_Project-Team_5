@@ -1,0 +1,15 @@
+
+SYMBOL MACHINE F24 REPORT (EMAIL IN PLAIN TEXT TO PROF WAKIN FOR LEADERBOARD)
+Processed 500 out of 500 symbols in data\sequence_ElecDemand_test.mat.
+Total penalty: 834.704 bits (1.6694 bits per symbol).
+      736 probabilities forecasted between 0.0000 (Inf bits) and 0.0039 (8 bits); actual occurrence rate 0.0014.
+     1088 probabilities forecasted between 0.0039 (8 bits) and 0.0078 (7 bits); actual occurrence rate 0.0046.
+      549 probabilities forecasted between 0.0078 (7 bits) and 0.0156 (6 bits); actual occurrence rate 0.0000.
+      306 probabilities forecasted between 0.0156 (6 bits) and 0.0312 (5 bits); actual occurrence rate 0.0000.
+      112 probabilities forecasted between 0.0312 (5 bits) and 0.0625 (4 bits); actual occurrence rate 0.0089.
+      405 probabilities forecasted between 0.0625 (4 bits) and 0.1250 (3 bits); actual occurrence rate 0.0667.
+      197 probabilities forecasted between 0.1250 (3 bits) and 0.2500 (2 bits); actual occurrence rate 0.2081.
+      808 probabilities forecasted between 0.2500 (2 bits) and 0.5000 (1 bits); actual occurrence rate 0.2983.
+      299 probabilities forecasted between 0.5000 (1 bits) and 1.0000 (0 bits); actual occurrence rate 0.6154.
+END SYMBOL MACHINE F24 REPORT
+

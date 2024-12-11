@@ -1,0 +1,15 @@
+
+SYMBOL MACHINE F24 REPORT (EMAIL IN PLAIN TEXT TO PROF WAKIN FOR LEADERBOARD)
+Processed 952 out of 952 symbols in data\sequence_solarWind_test.mat.
+Total penalty: 709.391 bits (0.7452 bits per symbol).
+     4811 probabilities forecasted between 0.0000 (Inf bits) and 0.0039 (8 bits); actual occurrence rate 0.0000.
+      617 probabilities forecasted between 0.0039 (8 bits) and 0.0078 (7 bits); actual occurrence rate 0.0000.
+      318 probabilities forecasted between 0.0078 (7 bits) and 0.0156 (6 bits); actual occurrence rate 0.0031.
+       56 probabilities forecasted between 0.0156 (6 bits) and 0.0312 (5 bits); actual occurrence rate 0.0000.
+      571 probabilities forecasted between 0.0312 (5 bits) and 0.0625 (4 bits); actual occurrence rate 0.0613.
+      944 probabilities forecasted between 0.0625 (4 bits) and 0.1250 (3 bits); actual occurrence rate 0.0530.
+      157 probabilities forecasted between 0.1250 (3 bits) and 0.2500 (2 bits); actual occurrence rate 0.1210.
+      150 probabilities forecasted between 0.2500 (2 bits) and 0.5000 (1 bits); actual occurrence rate 0.2867.
+      944 probabilities forecasted between 0.5000 (1 bits) and 1.0000 (0 bits); actual occurrence rate 0.8517.
+END SYMBOL MACHINE F24 REPORT
+

@@ -1,8 +1,8 @@
 clear all; close all; clc;
 
 % Load in training and testing data
-training_sequence = load('sequence_DIAtemp_train.mat');
-testing_sequence = load('sequence_DIAtemp_test.mat');
+training_sequence = load('data\sequence_solarWind_train.mat');
+testing_sequence = load('data\sequence_solarWind_test.mat');
 
 
 % Create desired output sequence for neural network from training data
@@ -17,19 +17,22 @@ prior_obs = [1 ; training_sequence.sequence(1:end - 1)];
 pprior_obs = [1 ; 1 ; training_sequence.sequence(1:end - 2)];
 observations = [prior_obs pprior_obs];
 
-% Initialize recurrent neural network of size 10 x 1 with Bayesian Regularization
+% Initialize feed forward neural network of size 10 x 1 with Bayesian Regularization
 net = feedforwardnet(10,'trainbr');
 
 % Train neural network with training data
 net = train(net,observations', training_data);
 
 % Test neural network on testing data
-sequenceLength = initializeSymbolMachineF24('sequence_DIAtemp_test.mat',0);
+sequenceLength = initializeSymbolMachineF24('data\sequence_solarWind_test.mat',0);
 
 % We can start with a uniform forecast for the first symbol
 probs = [1/9 1/9 1/9 1/9 1/9 1/9 1/9 1/9 1/9];
 [symbol,penalty] = symbolMachineF24(probs);
 prev_symbol = 5;
+
+% Log results to text file
+diary results\feed_forward_second_order_solarWind.txt;
 
 for ii = 2:sequenceLength
     % Get prediction from neural network

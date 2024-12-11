@@ -13,13 +13,15 @@ for i = 1:length(training_sequence.sequence)
 end
 
 % Create input sequence for neural network from training data
-training_sequence.sequence = [1 ; training_sequence.sequence(1:end - 1)];
+prior_obs = [1 ; training_sequence.sequence(1:end - 1)];
+pprior_obs = [1 ; 1 ; training_sequence.sequence(1:end - 2)];
+observations = [prior_obs pprior_obs];
 
-% Initialize feed forward neural network of size 10 x 1 with Bayesian Regularization
-net = feedforwardnet(10,'trainbr');
+% Initialize pattern neural network of size 10 x 1 with Bayesian Regularization
+net = layrecnet(1:2,10,'trainbr');
 
 % Train neural network with training data
-net = train(net,training_sequence.sequence.', training_data);
+net = train(net,observations', training_data);
 
 % Test neural network on testing data
 sequenceLength = initializeSymbolMachineF24('data\sequence_solarWind_test.mat',0);
@@ -27,13 +29,14 @@ sequenceLength = initializeSymbolMachineF24('data\sequence_solarWind_test.mat',0
 % We can start with a uniform forecast for the first symbol
 probs = [1/9 1/9 1/9 1/9 1/9 1/9 1/9 1/9 1/9];
 [symbol,penalty] = symbolMachineF24(probs);
+prev_symbol = 5;
 
 % Log results to text file
-diary results\feed_forward_first_order_solarWind.txt;
+diary results\recurrent_second_order_solarWind.txt;
 
 for ii = 2:sequenceLength
     % Get prediction from neural network
-    prediction = net(symbol).';
+    prediction = net([symbol; prev_symbol]).';
 
     % Normalize prediction between 0 and 1
     prediction = (prediction - min(prediction))/(max(prediction) - min(prediction));
@@ -44,6 +47,9 @@ for ii = 2:sequenceLength
     [M_max,I_max] = max(prediction);
     prediction(I_min) = prediction(I_min) + 0.0001;
     prediction(I_max) = prediction(I_max) - 0.0001;
+
+    % Update previous symbol
+    prev_symbol = symbol;
 
     % For each subsequent symbol, we can base our forecast on the preceding
     % symbol (which was given to us by the Symbol Machine)

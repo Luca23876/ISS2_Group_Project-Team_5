@@ -1,0 +1,61 @@
+Total Penalty Results 
+
+-------------------------------------------------------
+
+Feed Forward Neural Network (First Order):
+
+DIA Temp: 5532.051 bits (1.6830 bits per symbol)
+DIA Wind: 6168.707 bits (1.8767 bits per symbol)
+Electric Demand: 834.704 bits (1.6694 bits per symbol)
+Heart Data: 986.733 bits (1.0964 bits per symbol)
+Solar Wind: 726.927 bits (0.7636 bits per symbol)
+
+-------------------------------------------------------
+
+Feed Forward Neural Network (Second Order):
+
+DIA Temp: 5564.872 bits (1.6930 bits per symbol)
+DIA Wind: 6178.847 bits (1.8798 bits per symbol)
+Electric Demand: 853.193 bits (1.7064 bits per symbol)
+Heart Data: 997.323 bits (1.1081 bits per symbol)
+Solar Wind: 744.199 bits (0.7817 bits per symbol)
+
+-------------------------------------------------------
+
+Pattern Neural Network (First Order):
+
+DIA Temp: 5513.493 bits (1.6774 bits per symbol)
+DIA Wind: 6167.358 bits (1.8763 bits per symbol)
+Electric Demand: 828.516 bits (1.6570 bits per symbol)
+Heart Data: 1013.771 bits (1.1264 bits per symbol)
+Solar Wind: 708.996 bits (0.7447 bits per symbol)
+
+-------------------------------------------------------
+
+Pattern Neural Network (Second Order):
+
+DIA Temp: 5521.639 bits (1.6798 bits per symbol)
+DIA Wind: 6195.287 bits (1.8848 bits per symbol)
+Electric Demand: 843.197 bits (1.6864 bits per symbol)
+Heart Data: 1115.220 bits (1.2391 bits per symbol)
+Solar Wind: 709.391 bits (0.7452 bits per symbol)
+
+-------------------------------------------------------
+
+Recurrent Neural Network (First Order):
+
+DIA Temp: 5527.608 bits (1.6817 bits per symbol)
+DIA Wind: 6184.544 bits (1.8815 bits per symbol)
+Electric Demand: 879.526 bits (1.7591 bits per symbol)
+Heart Data: 1021.447 bits (1.1349 bits per symbol)
+Solar Wind: 708.139 bits (0.7438 bits per symbol)
+
+-------------------------------------------------------
+
+Recurrent Neural Network (Second Order):
+
+DIA Temp: 5564.619 bits (1.6929 bits per symbol)
+DIA Wind: 6197.494 bits (1.8855 bits per symbol)
+Electric Demand: 849.402 bits (1.6988 bits per symbol)
+Heart Data: 1032.928 bits (1.1477 bits per symbol)
+Solar Wind: 711.413 bits (0.7473 bits per symbol)
